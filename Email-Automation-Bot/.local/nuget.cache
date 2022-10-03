@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pjyWd216g0U6/RgTFMH5JaacRLSPXYyBxWU6OkzNWnWjfSUrYrZADXLQrFh/h5ibIiVsB3YSZwptp2tQLZBKbA==",
+  "dgSpecHash": "NVLBV2JFuyRunv4ZZXIiQU8Xa3f9oJz0xFIOOvbnFwti4eVN0ZKc0Mk6EvJJTQFn6EK/wRdztOLAUhh6rctdhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\miche\\Documents\\UiPath\\Project\\SE762-IS300-Project\\Email-Automation-Bot\\.local\\",
+  "projectFilePath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\miche\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\miche\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

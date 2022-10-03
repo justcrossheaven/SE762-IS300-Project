@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Update_Word_Template" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1206,999.333333333333" sap2010:WorkflowViewState.IdRef="Update_Word_Template_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Update_Word_Template" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="566,1824" sap2010:WorkflowViewState.IdRef="Update_Word_Template_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -55,18 +55,58 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update_Word_Template" sap:VirtualizedContainerService.HintSize="476,934.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Word_Template" sap:VirtualizedContainerService.HintSize="476,1759.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="inputSentDate" />
-      <Variable x:TypeArguments="x:String" Name="inputReceiverName" />
-      <Variable x:TypeArguments="x:String" Name="inputCompany" />
-      <Variable x:TypeArguments="x:String" Name="inputReceiverFirstName" />
-      <Variable x:TypeArguments="x:String" Name="inputProjectCategory" />
-      <Variable x:TypeArguments="x:String" Name="inputActivityDate" />
-      <Variable x:TypeArguments="x:String" Name="inputProjectCoordinator1" />
-      <Variable x:TypeArguments="x:String" Name="inputProjectCoordinator2" />
-      <Variable x:TypeArguments="x:String" Name="inputDeadlineDate1" />
-      <Variable x:TypeArguments="x:String" Name="inputDeadlineDate2" />
+      <Variable x:TypeArguments="x:String" Name="inputSentDate">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleSentDate</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputReceiverName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleReceiverName</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputCompany">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleCompany</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputReceiverFirstName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleFirstName</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputProjectCategory">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleProjectField</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputActivityDate">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">ExampleActivityDate</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputProjectCoordinator1">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Example Project Coord1</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputProjectCoordinator2">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Example Project Coord2</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputDeadlineDate1">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Example Deadline 1</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="inputDeadlineDate2">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Example Deadline 2</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="wordTemplateText" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -74,14 +114,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What is the send date of the email?" Title="What is the send date of the email?">
-      <ui:InputDialog.Result>
-        <OutArgument x:TypeArguments="x:String">[inputSentDate]</OutArgument>
-      </ui:InputDialog.Result>
-    </ui:InputDialog>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\Users\miche\Documents\UiPath\Project\SE762-IS300-Project\CreatedWordDocs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="C:\Users\miche\Documents\UiPath\Project\SE762-IS300-Project\Template_UoA-Part4Project-InvitationToJudges.docx" />
-    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\Users\miche\Documents\UiPath\Project\SE762-IS300-Project\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_1" Replace="[inputSentDate]" Search="%[inputDate]" />
-    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\Users\miche\Documents\UiPath\Project\SE762-IS300-Project\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_2" Replace="[inputReceiverName]" Search="%[inputName]" />
-    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\Users\miche\Documents\UiPath\Project\SE762-IS300-Project\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_3" Replace="[inputCompany]" Search="%[inputCompany]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\SE762-IS300-Project\CreatedWordDocs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="C:\SE762-IS300-Project\Template_UoA-Part4Project-InvitationToJudges.docx" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_1" Replace="[inputSentDate]" Search="%[inputDate]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_2" Replace="[inputReceiverName]" Search="%[inputName]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_3" Replace="[inputCompany]" Search="%[inputCompany]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_4" Replace="[inputReceiverFirstName]" Search="%[Name]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_5" Replace="[inputProjectCategory]" Search="%[ProjectCategory]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_6" Replace="[inputActivityDate]" Search="%[ActivityDate]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_7" Replace="[inputProjectCoordinator1]" Search="%[ProjectCoordinator1]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_8" Replace="[inputProjectCoordinator2]" Search="%[ProjectCoordinator2]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_9" Replace="[inputDeadlineDate1]" Search="%[deadlinedate]" />
+    <p:DocumentReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DocumentReplaceText_10" Replace="[inputDeadlineDate2]" Search="%[deadline2date]" />
+    <ui:RenameFileX DisplayName="Rename File" FilePath="C:\SE762-IS300-Project\CreatedWordDocs\Template_UoA-Part4Project-InvitationToJudges.docx" sap:VirtualizedContainerService.HintSize="434,145.333333333333" sap2010:WorkflowViewState.IdRef="RenameFileX_2" KeepExtension="True" NewName="[inputCompany]" />
   </Sequence>
 </Activity>

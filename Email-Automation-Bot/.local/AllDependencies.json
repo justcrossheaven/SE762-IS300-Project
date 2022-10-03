@@ -12335,9 +12335,9 @@
     "restore": {
       "projectUniqueName": "Email-Automation-Bot",
       "projectName": "Email-Automation-Bot",
-      "projectPath": "C:\\Users\\miche\\Documents\\UiPath\\Project\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
+      "projectPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
       "packagesPath": "C:\\Users\\miche\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miche\\Documents\\UiPath\\Project\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
+      "outputPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
     },
     "frameworks": {
       "net461": {
