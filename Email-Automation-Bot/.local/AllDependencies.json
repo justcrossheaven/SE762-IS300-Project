@@ -12329,14 +12329,14 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miche\\.nuget\\packages\\": {}
+    "C:\\Users\\mdes812\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Email-Automation-Bot",
       "projectName": "Email-Automation-Bot",
       "projectPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
-      "packagesPath": "C:\\Users\\miche\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\mdes812\\.nuget\\packages\\",
       "outputPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
     },
     "frameworks": {
