@@ -12329,15 +12329,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdes812\\.nuget\\packages\\": {}
+    "C:\\Users\\leorw\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Email-Automation-Bot",
       "projectName": "Email-Automation-Bot",
-      "projectPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
-      "packagesPath": "C:\\Users\\mdes812\\.nuget\\packages\\",
-      "outputPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
+      "projectPath": "C:\\Users\\leorw\\University\\IF300\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
+      "packagesPath": "C:\\Users\\leorw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leorw\\University\\IF300\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
     },
     "frameworks": {
       "net461": {
@@ -12368,7 +12368,7 @@
             "version": "[1.7.3, 1.7.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\leorw\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
