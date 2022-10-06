@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="736,4076" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1808,4282" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -77,38 +77,38 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="746,4011.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="785,4217" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\SE762-IS300-Project\Email-Automation-Bot\Excel" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="704,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Project_Data.xlsx" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="704,681.333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\Users\leorw\University\IF300\SE762-IS300-Project\Email-Automation-Bot\Excel" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="743,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Project_Data.xlsx" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="743,673" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="552,595.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap:VirtualizedContainerService.HintSize="552,587" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,503.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" WorkbookPath="Excel\Project_Data.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,495" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" WorkbookPath="Excel\Project_Data.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,230.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,229" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:DeleteRowsX DeleteRowsOption="Specific" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,138.666666666667" sap2010:WorkflowViewState.IdRef="DeleteRowsX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" RowPositions="1" />
+                    <ueab:DeleteRowsX DeleteRowsOption="Specific" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="DeleteRowsX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" RowPositions="1" />
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
@@ -117,10 +117,14 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <ui:WriteCell Cell="A1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="704,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="Project Category" WorkbookPath="Excel\Project_Data.xlsx" />
-    <ui:WriteCell Cell="B1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="704,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="Company" WorkbookPath="Excel\Project_Data.xlsx" />
-    <ui:WriteCell Cell="C1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="704,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="Number of Judges" WorkbookPath="Excel\Project_Data.xlsx" />
-    <Sequence DisplayName="ReadExcel" sap:VirtualizedContainerService.HintSize="704,2534" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <ui:WriteCell Cell="A1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="Project Category" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="B1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="Company" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="C1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="Number of Judges" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="H1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Sheet1" Text="Name2" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="I1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet1" Text="Email2" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="L1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet1" Text="Name3" WorkbookPath="Excel\Project_Data.xlsx" />
+    <ui:WriteCell Cell="M1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="743,115" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Sheet1" Text="Email3" WorkbookPath="Excel\Project_Data.xlsx" />
+    <Sequence DisplayName="ReadExcel" sap:VirtualizedContainerService.HintSize="743,2130" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="CompanyDataTable" />
         <Variable x:TypeArguments="x:String" Name="CompanyDTOutput" />
@@ -130,37 +134,41 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="662,2442" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="701,1817" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628,2356" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="667,1731" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:BuildDataTable DataTable="[CompanyDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="586,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Company_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;200&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email_x0020_Address&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Company_x0020_Name /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="586,2165.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Excel\Project_Data.xlsx">
+              <ui:BuildDataTable DataTable="[CompanyDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="625,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Company_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;200&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email_x0020_Address&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Name2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Email2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Name_x0020_3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact_x0020_Email_x0020_3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Company_x0020_Name /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="625,1540" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Excel\Project_Data.xlsx">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1892.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="591,1274" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="CompanyName" />
                         <Variable x:TypeArguments="x:String" Name="CompanyContact" />
                         <Variable x:TypeArguments="x:String" Name="CompanyCategory" />
+                        <Variable x:TypeArguments="x:String" Name="CompanyContact2Name" />
+                        <Variable x:TypeArguments="x:String" Name="CompanyContact3Name" />
+                        <Variable x:TypeArguments="x:String" Name="CompanyContact2Email" />
+                        <Variable x:TypeArguments="x:String" Name="CompanyContact3Email" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,888" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="549,1182" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
                         <ueab:ExcelForEachRowX.Body>
                           <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                             <ActivityAction.Argument1>
@@ -169,102 +177,98 @@
                             <ActivityAction.Argument2>
                               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                             </ActivityAction.Argument2>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,704" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:Object" Name="CompanyObject" />
-                                <Variable x:TypeArguments="x:String" Name="CompanyContactEmail" />
-                              </Sequence.Variables>
+                            <Sequence sap:VirtualizedContainerService.HintSize="515,1002" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[CompanyName]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Company.ByField("Company")]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[CompanyCategory]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Company.ByField("Project Category")]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[CompanyContact]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Company.ByField("Contact person 1")]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName, CompanyCategory, CompanyContact}]" DataTable="[CompanyDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                              <ui:OutputDataTable DataTable="[CompanyDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[CompanyDTOutput]" />
+                              <Sequence sap:VirtualizedContainerService.HintSize="473,910" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:Object" Name="CompanyObject" />
+                                  <Variable x:TypeArguments="x:String" Name="CompanyContactEmail" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[CompanyName]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Company.ByField("Company")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[CompanyCategory]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Company.ByField("Project Category")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[CompanyContact]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Company.ByField("Name")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[CompanyContactEmail]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[Company.ByField("Email")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[CompanyContact2Name]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[Company.ByField("Name2")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[CompanyContact2Email]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[Company.ByField("Email2")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[CompanyContact3Name]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[Company.ByField("Name3")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[CompanyContact3Email]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[Company.ByField("Email3")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName, CompanyCategory, CompanyContact, CompanyContactEmail, CompanyContact2Name, CompanyContact2Email, CompanyContact3Name, CompanyContact3Email}]" DataTable="[CompanyDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                              </Sequence>
                             </Sequence>
                           </ActivityAction>
                         </ueab:ExcelForEachRowX.Body>
                       </ueab:ExcelForEachRowX>
-                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="510,752.666666666667" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;E2:E27&quot;)]" SaveAfterEachRow="False">
-                        <ueab:ExcelForEachRowX.Body>
-                          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
-                            <ActivityAction.Argument1>
-                              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
-                            </ActivityAction.Argument1>
-                            <ActivityAction.Argument2>
-                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                            </ActivityAction.Argument2>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,568.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:String" Name="ContactEmail" />
-                              </Sequence.Variables>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[CurrentRow.ByField(&quot;Email&quot;)]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="434,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[ContactEmail]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("Email")]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CompanyDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,273.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                                <ui:ForEachRow.Body>
-                                  <ActivityAction x:TypeArguments="sd:DataRow">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Object">[CurrentRow("Email Address")]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Object">[ContactEmail]</InArgument>
-                                        </Assign.Value>
-                                      </Assign>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:ForEachRow.Body>
-                              </ui:ForEachRow>
-                            </Sequence>
-                          </ActivityAction>
-                        </ueab:ExcelForEachRowX.Body>
-                      </ueab:ExcelForEachRowX>
-                      <ui:OutputDataTable DataTable="[CompanyDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="510,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[CompanyDTOutput]" />
                     </Sequence>
                   </ActivityAction>
                 </ueab:ExcelApplicationCard.Body>
@@ -273,6 +277,8 @@
           </ActivityAction>
         </ueab:ExcelProcessScopeX.Body>
       </ueab:ExcelProcessScopeX>
+      <ui:OutputDataTable DataTable="[CompanyDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="701,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[CompanyDTOutput]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="701,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[CompanyDTOutput]" />
     </Sequence>
   </Sequence>
 </Activity>
