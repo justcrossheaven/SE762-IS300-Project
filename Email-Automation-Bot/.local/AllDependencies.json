@@ -726,13 +726,13 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
+      "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
         "type": "package",
         "compile": {
-          "lib/net45/_._": {}
+          "lib/_._": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll": {}
+          "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
       "Microsoft.Web.WebView2/1.0.705.50": {
@@ -2005,24 +2005,21 @@
           "lib/net461/ConnectionClient.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.11.4": {
+      "UiPath.Excel.Activities/2.9.5": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
-          "CsvHelper": "15.0.5",
+          "CsvHelper": "2.13.5",
           "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.4.1"
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
+          "NPOI": "2.4.1",
+          "SharpZipLib": "1.0.0"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
-          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
-          "lib/net461/Microsoft.Vbe.Interop.dll": {},
-          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
-          "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
           "lib/net461/UiPath.Excel.dll": {}
         },
@@ -3648,13 +3645,13 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
+      "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
         "type": "package",
         "compile": {
-          "lib/net45/_._": {}
+          "lib/_._": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll": {}
+          "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
       "Microsoft.Web.WebView2/1.0.705.50": {
@@ -4842,24 +4839,21 @@
           "lib/net461/ConnectionClient.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.11.4": {
+      "UiPath.Excel.Activities/2.9.5": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
-          "CsvHelper": "15.0.5",
+          "CsvHelper": "2.13.5",
           "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.4.1"
+          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
+          "NPOI": "2.4.1",
+          "SharpZipLib": "1.0.0"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
-          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
-          "lib/net461/Microsoft.Vbe.Interop.dll": {},
-          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
-          "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
           "lib/net461/UiPath.Excel.dll": {}
         },
@@ -6838,20 +6832,16 @@
         "version.txt"
       ]
     },
-    "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
-      "sha512": "82RWNPPaQRfFlEtkRQZgSo16a6WpHgL2gfeXbo/ISFHHJWNg/vtyKQrAW7iAsDNp5f3uiZP+9pQWxShAFrlbMw==",
+    "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
+      "sha512": "PuINhJH41DbKfkNU+qcyC4Wlt/z0DgI/ViZv6gjUclylnFbUIpCdqm4fK+PKJDfiarHTKnGWkxjKuOIS1Bqs5Q==",
       "type": "package",
-      "path": "microsoft.visualstudio.ole.interop/16.7.30328.74",
+      "path": "microsoft.visualstudio.ole.interop/7.10.6071",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.txt",
-        "PackageIcon.png",
-        "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
-        "lib/net45/Microsoft.VisualStudio.OLE.Interop.xml",
-        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll",
-        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.xml",
-        "microsoft.visualstudio.ole.interop.16.7.30328.74.nupkg.sha512",
+        "lib/Microsoft.VisualStudio.OLE.Interop.dll",
+        "lib/Microsoft.VisualStudio.OLE.Interop.xml",
+        "microsoft.visualstudio.ole.interop.7.10.6071.nupkg.sha512",
         "microsoft.visualstudio.ole.interop.nuspec"
       ]
     },
@@ -11060,18 +11050,14 @@
         "uipath.connectionclient.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.11.4": {
-      "sha512": "PYSWoOW7ftcjeUE2m1e+gNFNuYrrKQN3tygoDbNVFsQYyJPIe2YnhHO7kW+Svn0NlLO91APHzNKKGkiD+L8FrA==",
+    "UiPath.Excel.Activities/2.9.5": {
+      "sha512": "tx8DWPOzMeTq15wy6afo8u6dmD0y4XfQG49WsEKDEinysY8zJc1/92Rnf9tdlwng2SpWCJ6PTlDEpfU/SX1k3A==",
       "type": "package",
-      "path": "uipath.excel.activities/2.11.4",
+      "path": "uipath.excel.activities/2.9.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net461/Microsoft.Office.Interop.Excel.dll",
-        "lib/net461/Microsoft.Vbe.Interop.dll",
-        "lib/net461/Office.dll",
         "lib/net461/UiPath.Excel.Activities.Design.dll",
-        "lib/net461/UiPath.Excel.Activities.Package.dll",
         "lib/net461/UiPath.Excel.Activities.dll",
         "lib/net461/UiPath.Excel.dll",
         "lib/net461/de/UiPath.Excel.Activities.Design.resources.dll",
@@ -11107,47 +11093,7 @@
         "lib/net461/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
-        "lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
-        "lib/net5.0-windows7.0/Office.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.11.4.nupkg.sha512",
+        "uipath.excel.activities.2.9.5.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -12321,7 +12267,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
+      "UiPath.Excel.Activities >= 2.9.5 <= 2.9.5",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.System.Activities >= 21.10.5 <= 21.10.5",
       "UiPath.UIAutomation.Activities >= 21.10.6 <= 21.10.6",
@@ -12329,15 +12275,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leorw\\.nuget\\packages\\": {}
+    "C:\\Users\\miche\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Email-Automation-Bot",
       "projectName": "Email-Automation-Bot",
-      "projectPath": "C:\\Users\\leorw\\University\\IF300\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
-      "packagesPath": "C:\\Users\\leorw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leorw\\University\\IF300\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
+      "projectPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local",
+      "packagesPath": "C:\\Users\\miche\\.nuget\\packages\\",
+      "outputPath": "C:\\SE762-IS300-Project\\Email-Automation-Bot\\.local"
     },
     "frameworks": {
       "net461": {
@@ -12345,7 +12291,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.11.4, 2.11.4]"
+            "version": "[2.9.5, 2.9.5]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
@@ -12368,7 +12314,7 @@
             "version": "[1.7.3, 1.7.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\leorw\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
