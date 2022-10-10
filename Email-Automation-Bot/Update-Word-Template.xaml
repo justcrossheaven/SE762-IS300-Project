@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,2784</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>752.666666666667,2823.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Update_Word_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -82,6 +82,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -89,7 +90,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Word_Template" sap:VirtualizedContainerService.HintSize="552,2719" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Word_Template" sap:VirtualizedContainerService.HintSize="552,2758.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="newDocPath" />
     </Sequence.Variables>
@@ -98,38 +99,38 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="510,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[newDocPath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[path.Combine(WordDocFolderPath, CompanyName + PersonFullName + ".docx")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[path.Combine(WordDocFolderPath, CompanyName + " " + PersonFullName + ".docx")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[newDocPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[WordDocTemplatePath]" />
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[newDocPath]" sap:VirtualizedContainerService.HintSize="510,2330" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[newDocPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="510,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[WordDocTemplatePath]" />
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[newDocPath]" sap:VirtualizedContainerService.HintSize="510,2365.33333333333" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2221" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2256.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[DateTime.Now.ToString(&quot;dd/MM/yy&quot;)]" ReplaceAll="True" Search="%[inputDate]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[PersonFullName]" ReplaceAll="True" Search="%[inputName]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[CompanyName]" ReplaceAll="True" Search="%[inputCompany]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[PersonFullName]" ReplaceAll="True" Search="%[Name]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[ProjectCategory]" ReplaceAll="True" Search="%[ProjectCategory]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[ActivityDate]" ReplaceAll="True" Search="%[ActivityDate]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[ProjectCoordinator1]" ReplaceAll="True" Search="%[ProjectCoordinator1]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[ProjectCoordinator2]" ReplaceAll="True" Search="%[ProjectCoordinator2]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_9" Replace="[DeadlineDate1]" ReplaceAll="True" Search="%[deadlinedate]" />
-            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_10" Replace="[DeadlineDate2]" ReplaceAll="True" Search="%[deadline2date]" />
-            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[path.Combine(PdfFolderPath, CompanyName + PersonFullName + &quot;.pdf&quot;)]" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="WordExportToPdf_2" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[DateTime.Now.ToString(&quot;dd/MM/yy&quot;)]" ReplaceAll="True" Search="%[inputDate]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[PersonFullName]" ReplaceAll="True" Search="%[inputName]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[CompanyName]" ReplaceAll="True" Search="%[inputCompany]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[PersonFullName]" ReplaceAll="True" Search="%[Name]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[ProjectCategory]" ReplaceAll="True" Search="%[ProjectCategory]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[ActivityDate]" ReplaceAll="True" Search="%[ActivityDate]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[ProjectCoordinator1]" ReplaceAll="True" Search="%[ProjectCoordinator1]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[ProjectCoordinator2]" ReplaceAll="True" Search="%[ProjectCoordinator2]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_9" Replace="[DeadlineDate1]" ReplaceAll="True" Search="%[deadlinedate]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="WordReplaceText_10" Replace="[DeadlineDate2]" ReplaceAll="True" Search="%[deadline2date]" />
+            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[path.Combine(PdfFolderPath, CompanyName + &quot; &quot; + PersonFullName + &quot;.pdf&quot;)]" sap:VirtualizedContainerService.HintSize="434,111.333333333333" sap2010:WorkflowViewState.IdRef="WordExportToPdf_2" />
           </Sequence>
         </ActivityAction>
       </p:WordApplicationScope.Body>
