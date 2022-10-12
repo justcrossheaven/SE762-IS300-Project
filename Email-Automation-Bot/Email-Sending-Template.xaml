@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>574.666666666667,1352</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>676,964.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_Sending_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -84,10 +84,9 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Sending_Template" sap:VirtualizedContainerService.HintSize="552,1287.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Sending_Template" sap:VirtualizedContainerService.HintSize="552,900" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="filePath" />
     </Sequence.Variables>
@@ -96,7 +95,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="510,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="510,62" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[filePath]</OutArgument>
       </Assign.To>
@@ -104,19 +103,19 @@
         <InArgument x:TypeArguments="x:String">[path.Combine(PdfFolderPath, CompanyName + " " + PersonFullName + ".pdf")]</InArgument>
       </Assign.Value>
     </Assign>
-    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="youtibe2233@gmail.com" DisplayName="Use Gmail" EmailAddress="youtibe2233@gmail.com" sap:VirtualizedContainerService.HintSize="510,1094" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="michellelu.lu7@gmail.com" DisplayName="Use Gmail" EmailAddress="michellelu.lu7@gmail.com" sap:VirtualizedContainerService.HintSize="510,706" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
       <umab:GmailApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Mail" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,910" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,519.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Mail]" Body="[&quot;Dear &quot; + PersonFullName.ToString + &quot; ,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;We value and appreciate your involvement as an industry sponsor in our Part 4 Project activity. The Projects Exhibitions are on Thursday, October 20th, 2022.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Please find attached the invitation letter with further details. It is greatly appreciated if you could kindly confirm your involvement as soon as possible and at the latest by 9th September, 2022.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Actions to be taken:&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Please inform us by return email if your company does not wish to be involved.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Otherwise,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Kindly fill this form to inform us of all those who will be attending as judges on the Display Day and the sponsor’s details.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;&#x9;2. Please check that your logo is up to date on this online slidedeck.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Company logos are listed by alphabetical order. Please confirm or update it directly in your slide with a high-resolution image of your latest logo and fill the 'confirmation note' on the slide in either case.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Best regards,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Dulsha&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,818" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invitation to the UoA Engineering Part-4 Project Exhibition Day Industry" To="[Email]" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Mail]" Body="[&quot;Dear &quot; + PersonFullName.ToString + &quot; ,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;We value and appreciate your involvement as an industry sponsor in our Part 4 Project activity. The Projects Exhibitions are on Thursday, October 20th, 2022.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Please find attached the invitation letter with further details. It is greatly appreciated if you could kindly confirm your involvement as soon as possible and at the latest by 9th September, 2022.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Actions to be taken:&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Please inform us by return email if your company does not wish to be involved.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Otherwise,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Kindly fill this form to inform us of all those who will be attending as judges on the Display Day and the sponsor’s details.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;&#x9;2. Please check that your logo is up to date on this online slidedeck.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Company logos are listed by alphabetical order. Please confirm or update it directly in your slide with a high-resolution image of your latest logo and fill the 'confirmation note' on the slide in either case.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Best regards,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Dulsha&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invitation to the UoA Engineering Part-4 Project Exhibition Day Industry" To="[Email]" UseDocumentAsBody="False">
               <umab:SendMailX.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                   <InArgument x:TypeArguments="x:String">[path.Combine(PdfFolderPath, CompanyName + " " + PersonFullName + ".pdf")]</InArgument>
