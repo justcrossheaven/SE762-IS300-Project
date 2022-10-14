@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="763.333333333333,7170" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,6942" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -75,7 +75,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -84,7 +83,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="773.333333333333,7095.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="773,6877" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="projectDataPath" />
       <Variable x:TypeArguments="x:String" Name="saveFilesToFolderPath" />
@@ -106,38 +105,38 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731.333333333333,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please give the full name of the first project coordinator." Title="Project Coordinators Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please give the full name of the first project coordinator." Title="Project Coordinators Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputProjectCoordinator1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731.333333333333,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please give the full name of the second project coordinator." Title="Project Coordinators Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731,238" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please give the full name of the second project coordinator." Title="Project Coordinators Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputProjectCoordinator2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731.333333333333,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please Input the deadline date for the prize money donation acknowledgement." Title="Deadlines Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731,238" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please Input the deadline date for the prize money donation acknowledgement." Title="Deadlines Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731.333333333333,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please Input the free parking request deadline date." Title="Deadlines Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731,238" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please Input the free parking request deadline date." Title="Deadlines Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731.333333333333,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please input the date of the event.'" Title="Event Date Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="731,238" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please input the date of the event.'" Title="Event Date Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="731.333333333333,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please Select The Spreadsheet Containing The Event Data.&quot;]" />
-    <ui:SelectFile DisplayName="Select File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="731.333333333333,137.333333333333" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[projectDataPath]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="646,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Please Select The Word Doc Template.&quot;]" />
-    <ui:SelectFile DisplayName="Select File" Filter="Word|*.docx;*.doc;*.docm;*.dotx;*.dot" sap:VirtualizedContainerService.HintSize="646,138.666666666667" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[wordTemplatePath]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="646,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please Select Where To Save Generated Outputs.&quot;]" />
-    <ui:SelectFolder DisplayName="Select Where To Save Events Folder" sap:VirtualizedContainerService.HintSize="646,78.6666666666667" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[saveFilesToFolderPath]" />
-    <Assign sap:VirtualizedContainerService.HintSize="646,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="731,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please Select The Spreadsheet Containing The Event Data.&quot;]" />
+    <ui:SelectFile DisplayName="Select File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="731,137" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[projectDataPath]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="731,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Please Select The Word Doc Template.&quot;]" />
+    <ui:SelectFile DisplayName="Select File" Filter="Word|*.docx;*.doc;*.docm;*.dotx;*.dot" sap:VirtualizedContainerService.HintSize="731,137" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[wordTemplatePath]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="731,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please Select Where To Save Generated Outputs.&quot;]" />
+    <ui:SelectFolder DisplayName="Select Where To Save Events Folder" sap:VirtualizedContainerService.HintSize="731,78" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[saveFilesToFolderPath]" />
+    <Assign sap:VirtualizedContainerService.HintSize="731,60" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[currentWorkingFolderPath]</OutArgument>
       </Assign.To>
@@ -145,10 +144,10 @@
         <InArgument x:TypeArguments="x:String">[path.Combine(saveFilesToFolderPath, path.GetFileNameWithoutExtension(projectDataPath))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="646,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[currentWorkingFolderPath]" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="646,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[projectDataPath]" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="646,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[wordTemplatePath]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="646,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="731,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[currentWorkingFolderPath]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="731,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[projectDataPath]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="731,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[wordTemplatePath]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="731,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -170,15 +169,15 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="731.333333333333,79.3333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[wordDocFolderPath]" />
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="731.333333333333,79.3333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[pdfFolderPath]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="731.333333333333,936" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[path.Combine(currentWorkingFolderPath,  path.GetFileName(projectDataPath))]">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="731,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[wordDocFolderPath]" />
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="731,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[pdfFolderPath]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="731,836" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[path.Combine(currentWorkingFolderPath,  path.GetFileName(projectDataPath))]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,827.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,727" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="RawData" />
               <Variable x:TypeArguments="sd:DataTable" Name="headings" />
@@ -189,7 +188,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[RawData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[RawData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -202,11 +201,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelReadRange>
-            <ui:RemoveDataRow Row="{x:Null}" DataTable="[RawData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="1" />
-            <ui:ExcelWriteRange AddHeaders="False" DataTable="[RawData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sanitised Data" StartingCell="A1" />
-            <ui:BuildDataTable DataTable="[headings]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Number_x0020_of_x0020_Judges&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_to&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;comment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:ExcelWriteRange AddHeaders="True" DataTable="[headings]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Sanitised Data" StartingCell="A1" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[sanitisedData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Sanitised Data">
+            <ui:RemoveDataRow Row="{x:Null}" DataTable="[RawData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="0" />
+            <ui:RemoveDataRow Row="{x:Null}" DataTable="[RawData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0" />
+            <ui:ExcelWriteRange AddHeaders="False" DataTable="[RawData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sanitised Data" StartingCell="A2" />
+            <ui:BuildDataTable DataTable="[headings]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Company&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Number_x0020_of_x0020_Judges&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Name3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mobile3&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dietery_x0020_restrictions&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_to&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;comment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[headings]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Sanitised Data" StartingCell="A1" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[sanitisedData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Sanitised Data">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -217,13 +217,13 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="731.333333333333,1519.33333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="731,1420" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="613.333333333333,1397.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="621,1300" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="nameHeader" />
               <Variable x:TypeArguments="x:String" Name="emailHeader" />
@@ -236,7 +236,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="571.333333333333,191.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="579,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -274,9 +274,9 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="571.333333333333,222" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="579,208" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                   </Assign.To>
@@ -286,7 +286,7 @@
                 </Assign>
               </If.Then>
               <If.Else>
-                <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                   </Assign.To>
@@ -296,9 +296,9 @@
                 </Assign>
               </If.Else>
             </If>
-            <If Condition="[numberOfJudges &gt; 3]" sap:VirtualizedContainerService.HintSize="571.333333333333,251.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[numberOfJudges &gt; 3]" sap:VirtualizedContainerService.HintSize="579,208" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                   </Assign.To>
@@ -308,7 +308,7 @@
                 </Assign>
               </If.Then>
             </If>
-            <If Condition="[numberOfJudges &gt; 0]" sap:VirtualizedContainerService.HintSize="571.333333333333,520.666666666667" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[numberOfJudges &gt; 0]" sap:VirtualizedContainerService.HintSize="579,479" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,330.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1,numberOfJudges).ToArray()]">
                   <ui:ForEach.Body>
@@ -439,18 +439,10 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Email Sending Template" sap:VirtualizedContainerService.HintSize="334,112.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Email-Sending-Template.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="Email">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(emailHeader + item.ToString).ToString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pdfFolderPath" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="PersonFullName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(nameHeader + item.ToString).ToString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="CompanyName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(&quot;Company&quot;).ToString" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow.Item(emailHeader + item.ToString).ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">[pdfFolderPath]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="PersonFullName">[CurrentRow.Item(nameHeader + item.ToString).ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="CompanyName">[CurrentRow.Item("Company").ToString]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
