@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1227.33333333333,10735.3333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1227.33333333333,10933.3333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -87,7 +87,6 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -95,7 +94,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1237.33333333333,13390" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="1237.33333333333,10868.6666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="projectDataPath" />
       <Variable x:TypeArguments="x:String" Name="saveFilesToFolderPath" />
@@ -115,22 +114,10 @@
       <Variable x:TypeArguments="x:String" Name="onlineSlideDeckUrl" />
       <Variable x:TypeArguments="x:String" Name="KeepRunning" />
       <Variable x:TypeArguments="s:DateTime" Name="DeadlineDate1" />
-      <Variable x:TypeArguments="x:Boolean" Name="DeadlineDateBreak1">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="DeadlineDateBreak1" />
       <Variable x:TypeArguments="s:DateTime" Name="DeadlineDate2" />
-      <Variable x:TypeArguments="x:Boolean" Name="DeadlineDateBreak2">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="ActivityDateBreak3">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="DeadlineDateBreak2" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="ActivityDateBreak3" />
       <Variable x:TypeArguments="s:DateTime" Name="ActivityRealDate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -153,15 +140,15 @@
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." Condition="[DeadlineDateBreak1]" DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,476.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,187.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
               <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454.666666666667,894" sap2010:WorkflowViewState.IdRef="Sequence_38">
                 <sap:WorkflowViewStateService.ViewState>
@@ -177,7 +164,7 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(inputDeadlineDate1, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleWhile DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412.666666666667,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
+                <ui:InterruptibleWhile Condition="[DateTime.Compare(DeadlineDate1, DateTime.Today).Equals(-1)]" DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412.666666666667,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
                   <ui:InterruptibleWhile.Body>
                     <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_41">
                       <sap:WorkflowViewStateService.ViewState>
@@ -200,9 +187,6 @@
                       </Assign>
                     </Sequence>
                   </ui:InterruptibleWhile.Body>
-                  <ui:InterruptibleWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DateTime.Compare(DeadlineDate1, DateTime.Today).Equals(-1)" />
-                  </ui:InterruptibleWhile.Condition>
                 </ui:InterruptibleWhile>
                 <Assign sap:VirtualizedContainerService.HintSize="412.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_22">
                   <Assign.To>
@@ -215,10 +199,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -245,9 +229,6 @@
           </TryCatch>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DeadlineDateBreak1" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -259,15 +240,15 @@
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." Condition="[DeadlineDateBreak2]" DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,476.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,187.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_5">
             <TryCatch.Try>
               <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454.666666666667,894" sap2010:WorkflowViewState.IdRef="Sequence_43">
                 <sap:WorkflowViewStateService.ViewState>
@@ -283,7 +264,7 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(inputDeadlineDate2, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleWhile DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412.666666666667,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_15">
+                <ui:InterruptibleWhile Condition="[DateTime.Compare(DeadlineDate2, DateTime.Today).Equals(-1)]" DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412.666666666667,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_15">
                   <ui:InterruptibleWhile.Body>
                     <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_42">
                       <sap:WorkflowViewStateService.ViewState>
@@ -306,9 +287,6 @@
                       </Assign>
                     </Sequence>
                   </ui:InterruptibleWhile.Body>
-                  <ui:InterruptibleWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DateTime.Compare(DeadlineDate2, DateTime.Today).Equals(-1)" />
-                  </ui:InterruptibleWhile.Condition>
                 </ui:InterruptibleWhile>
                 <Assign sap:VirtualizedContainerService.HintSize="412.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_27">
                   <Assign.To>
@@ -321,10 +299,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -351,9 +329,6 @@
           </TryCatch>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DeadlineDateBreak2" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -365,17 +340,17 @@
         <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." Condition="[ActivityDateBreak3]" DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,476.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_47">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,187.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_6">
             <TryCatch.Try>
-              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="462,894" sap2010:WorkflowViewState.IdRef="Sequence_46">
+              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="462,851.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_46">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -389,7 +364,7 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(inputActivityDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleWhile DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="420,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_17">
+                <ui:InterruptibleWhile Condition="[DateTime.Compare(ActivityRealDate, DateTime.Today).Equals(-1)]" DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="420,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_17">
                   <ui:InterruptibleWhile.Body>
                     <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_45">
                       <sap:WorkflowViewStateService.ViewState>
@@ -412,9 +387,6 @@
                       </Assign>
                     </Sequence>
                   </ui:InterruptibleWhile.Body>
-                  <ui:InterruptibleWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DateTime.Compare(ActivityRealDate, DateTime.Today).Equals(-1)" />
-                  </ui:InterruptibleWhile.Condition>
                 </ui:InterruptibleWhile>
                 <Assign sap:VirtualizedContainerService.HintSize="420,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_30">
                   <Assign.To>
@@ -427,10 +399,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -457,16 +429,13 @@
           </TryCatch>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ActivityDateBreak3" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:InterruptibleWhile DisplayName="As long as the form url is empty" sap:VirtualizedContainerService.HintSize="1195.33333333333,498" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_19">
+    <ui:InterruptibleWhile Condition="[String.IsNullOrEmpty(formUrl)]" DisplayName="As long as the form url is empty" sap:VirtualizedContainerService.HintSize="1195.33333333333,498" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_19">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,331.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_48">
           <sap:WorkflowViewStateService.ViewState>
@@ -481,11 +450,8 @@
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="String.IsNullOrEmpty(formUrl)" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
-    <ui:InterruptibleWhile DisplayName="As long as the online slide deck url is empty" sap:VirtualizedContainerService.HintSize="1195.33333333333,498" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_20">
+    <ui:InterruptibleWhile Condition="[String.IsNullOrEmpty(onlineSlideDeckUrl)]" DisplayName="As long as the online slide deck url is empty" sap:VirtualizedContainerService.HintSize="1195.33333333333,498" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_20">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,331.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_49">
           <sap:WorkflowViewStateService.ViewState>
@@ -500,9 +466,6 @@
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="String.IsNullOrEmpty(onlineSlideDeckUrl)" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message To Select SpreadSheet" sap:VirtualizedContainerService.HintSize="1195.33333333333,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please Select The Spreadsheet Containing The Event Data.&quot;]" />
     <ui:SelectFile DisplayName="Select SpreadSheet" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="1195.33333333333,137.333333333333" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[projectDataPath]" />
@@ -826,135 +789,48 @@
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
     <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="OkCancel" ChosenButton="[KeepRunning]" DisplayName="Allow Users To Check Generated Files" sap:VirtualizedContainerService.HintSize="1195.33333333333,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;You can check generated files. Click Ok to continue, Cancel to stop&quot;]" />
-    <If sap2010:Annotation.AnnotationText="We would like the user to be able to check the files. Therefore we choose not to put this sequence in the previous loop." Condition="[KeepRunning.Equals(&quot;Ok&quot;)]" DisplayName="If User is Fine With Files" sap:VirtualizedContainerService.HintSize="1195.33333333333,1476" sap2010:WorkflowViewState.IdRef="If_7">
+    <If sap2010:Annotation.AnnotationText="We would like the user to be able to check the files. Therefore we choose not to put this sequence in the previous loop." Condition="[KeepRunning.Equals(&quot;Ok&quot;)]" DisplayName="If User is Fine With Files" sap:VirtualizedContainerService.HintSize="1195.33333333333,490.666666666667" sap2010:WorkflowViewState.IdRef="If_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Loop Through the DataTable" sap:VirtualizedContainerService.HintSize="773.333333333333,1284.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="731.333333333333,1068.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Load Necessary Data" sap:VirtualizedContainerService.HintSize="697.333333333333,946.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="emailHeader" />
-                    <Variable x:TypeArguments="x:Int32" Name="Judges" />
-                    <Variable x:TypeArguments="x:String" Name="nameHeader" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="655.333333333333,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                    <ui:MultipleAssign.AssignOperations>
-                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                          <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:String">[emailHeader]</OutArgument>
-                          </ui:AssignOperation.To>
-                          <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">Email</InArgument>
-                          </ui:AssignOperation.Value>
-                        </ui:AssignOperation>
-                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                          <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:String">[nameHeader]</OutArgument>
-                          </ui:AssignOperation.To>
-                          <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">Name</InArgument>
-                          </ui:AssignOperation.Value>
-                        </ui:AssignOperation>
-                      </scg:List>
-                    </ui:MultipleAssign.AssignOperations>
-                  </ui:MultipleAssign>
-                  <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Number of Judges is Empty" sap:VirtualizedContainerService.HintSize="655.333333333333,314" sap2010:WorkflowViewState.IdRef="If_6">
-                    <If.Then>
-                      <Sequence DisplayName="Assign Number of Judge To Be 0" sap:VirtualizedContainerService.HintSize="304.666666666667,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Assign Number of Judge" sap:VirtualizedContainerService.HintSize="304.666666666667,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(CurrentRow.Item("Number of Judges"))]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Judge" sap:VirtualizedContainerService.HintSize="655.333333333333,330.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(1,Judges).ToArray()]">
-                    <ui:ForEach.Body>
-                      <ActivityAction x:TypeArguments="x:Object">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Send Email To Judge" sap:VirtualizedContainerService.HintSize="376,204.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Email Sending Template" sap:VirtualizedContainerService.HintSize="334,112.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Email-Sending-Template.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow.Item(emailHeader + item.ToString).ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">[pdfFolderPath]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PersonFullName">[CurrentRow.Item(nameHeader + item.ToString).ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="CompanyName">[CurrentRow.Item("Company").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="Deadline">[inputDeadlineDate1.ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="ActivityDate">[inputActivityDate.ToString]</InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ForEach.Body>
-                  </ui:ForEach>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-          </ui:ForEachRow>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:05:00" DisplayName="Notify the User" sap:VirtualizedContainerService.HintSize="731.333333333333,84" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Emails are all sent!&quot;]" />
-        </Sequence>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Email Sending Template" sap:VirtualizedContainerService.HintSize="334,112.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Email-Sending-Template.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="Email" />
+            <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pdfFolderPath" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="PersonFullName" />
+            <InArgument x:TypeArguments="x:String" x:Key="CompanyName" />
+            <InArgument x:TypeArguments="x:String" x:Key="Deadline">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="inputDeadlineDate1.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ActivityDate">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="inputActivityDate.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="sd:DataTable" x:Key="sanitisedData">
+              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="sanitisedData" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Stop The Robot" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_26">
+        <Sequence DisplayName="Stop The Robot" sap:VirtualizedContainerService.HintSize="376,299.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Notify the User" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Application Stopped. Files will not be sent out.&quot;]" />
+          <Sequence DisplayName="Send Email To Judge" sap:VirtualizedContainerService.HintSize="334,83.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
         </Sequence>
       </If.Else>
     </If>
