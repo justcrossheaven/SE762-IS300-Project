@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>874.666666666667,489.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>676,466</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_Sending_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,45 +92,52 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>Google.Apis.Core</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Sending_Template" sap:VirtualizedContainerService.HintSize="476,424.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Email_Sending_Template" sap:VirtualizedContainerService.HintSize="242,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="filePath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Google Exception" sap:VirtualizedContainerService.HintSize="434,332.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Google Exception" sap:VirtualizedContainerService.HintSize="886.666666666667,2588.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="cjia881@aucklanduni.ac.nz" sap2010:Annotation.AnnotationText="We only want to use Gmail once to prevent multiple access to the account." DisplayName="Use Gmail" EmailAddress="cjia881@aucklanduni.ac.nz" sap:VirtualizedContainerService.HintSize="849.333333333333,2100.66666666667" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
+        <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mlu415@aucklanduni.ac.nz" sap2010:Annotation.AnnotationText="We only want to use Gmail once to prevent multiple access to the account." DisplayName="Use Gmail" EmailAddress="mlu415@aucklanduni.ac.nz" sap:VirtualizedContainerService.HintSize="848,2108" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
           <umab:GmailApplicationCard.Body>
             <ActivityAction x:TypeArguments="um:IMailQuickHandle">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Mail" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815.333333333333,1886" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="814,1893.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Loop Through the DataTable" sap:VirtualizedContainerService.HintSize="773.333333333333,1794" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Loop Through the DataTable" sap:VirtualizedContainerService.HintSize="772,1801.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="731.333333333333,1577.33333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="730,1584.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Load Necessary Data" sap:VirtualizedContainerService.HintSize="697.333333333333,1454.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Load Necessary Data" sap:VirtualizedContainerService.HintSize="696,1461.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="emailHeader" />
                             <Variable x:TypeArguments="x:Int32" Name="Judges" />
@@ -141,7 +148,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="655.333333333333,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="654,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -163,15 +170,15 @@
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
-                          <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Number of Judges is Empty" sap:VirtualizedContainerService.HintSize="655.333333333333,315.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Number of Judges is Empty" sap:VirtualizedContainerService.HintSize="654,316.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
-                              <Sequence DisplayName="Assign Number of Judge To Be 0" sap:VirtualizedContainerService.HintSize="304.666666666667,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence DisplayName="Assign Number of Judge To Be 0" sap:VirtualizedContainerService.HintSize="304,154" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
                                   </Assign.To>
@@ -182,13 +189,13 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Assign Number of Judge" sap:VirtualizedContainerService.HintSize="304.666666666667,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence DisplayName="Assign Number of Judge" sap:VirtualizedContainerService.HintSize="304,154" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
                                   </Assign.To>
@@ -199,13 +206,13 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Judge" sap:VirtualizedContainerService.HintSize="655.333333333333,837.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(1,Judges).ToArray()]">
+                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="Sends an email for Each Judge" sap:VirtualizedContainerService.HintSize="654,842.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(1,Judges).ToArray()]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                                 </ActivityAction.Argument>
-                                <Sequence sap:VirtualizedContainerService.HintSize="476,710.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <Sequence sap:VirtualizedContainerService.HintSize="476,715.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,7 +248,7 @@
                                       </scg:List>
                                     </ui:MultipleAssign.AssignOperations>
                                   </ui:MultipleAssign>
-                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Mail]" Body="[&quot;Dear &quot; + PersonFullName.ToString + &quot; ,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;We value and appreciate your involvement as an industry sponsor in our Part 4 Project activity. The Projects Exhibitions are on &quot; + ActivityDate.ToString + &quot;.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Please find attached the invitation letter with further details. It is greatly appreciated if you could kindly confirm your involvement as soon as possible and at the latest by &quot; + Deadline.ToString + &quot;.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Actions to be taken:&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Please inform us by return email if your company does not wish to be involved.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Otherwise,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Kindly fill the form in the doc to inform us of all those who will be attending as judges on the Display Day and the sponsor’s details.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;&#x9;2. Please check that your logo is up to date on the online slidedeck in the doc.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Company logos are listed by alphabetical order. Please confirm or update it directly in your slide with a high-resolution image of your latest logo and fill the 'confirmation note' on the slide in either case.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Best regards,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Dulsha&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,418" sap2010:WorkflowViewState.IdRef="SendMailX_4" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invitation to the UoA Engineering Part-4 Project Exhibition Day Industry" To="[Email]" UseDocumentAsBody="False">
+                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Mail]" Body="[&quot;Dear &quot; + PersonFullName.ToString + &quot; ,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;We value and appreciate your involvement as an industry sponsor in our Part 4 Project activity. The Projects Exhibitions are on &quot; + ActivityDate.ToString + &quot;.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Please find attached the invitation letter with further details. It is greatly appreciated if you could kindly confirm your involvement as soon as possible and at the latest by &quot; + Deadline.ToString + &quot;.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Actions to be taken:&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Please inform us by return email if your company does not wish to be involved.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Otherwise,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;1. Kindly fill the form in the doc to inform us of all those who will be attending as judges on the Display Day and the sponsor’s details.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;&#x9;&#x9;2. Please check that your logo is up to date on the online slidedeck in the doc.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Company logos are listed by alphabetical order. Please confirm or update it directly in your slide with a high-resolution image of your latest logo and fill the 'confirmation note' on the slide in either case.&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Best regards,&quot; &amp; VbCrLf &amp; VbCrLf &amp; &quot;Dulsha&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,422.666666666667" sap2010:WorkflowViewState.IdRef="SendMailX_4" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invitation to the UoA Engineering Part-4 Project Exhibition Day Industry" To="[Email]" UseDocumentAsBody="False">
                                     <umab:SendMailX.Files>
                                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                         <InArgument x:TypeArguments="x:String">[path.Combine(PdfFolderPath, CompanyName + " " + PersonFullName + ".pdf")]</InArgument>
@@ -266,7 +273,7 @@
                       </ActivityAction>
                     </ui:ForEachRow.Body>
                   </ui:ForEachRow>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:05:00" DisplayName="Notify the User" sap:VirtualizedContainerService.HintSize="731.333333333333,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Emails are all sent!&quot;]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:05:00" DisplayName="Emails are sent" sap:VirtualizedContainerService.HintSize="730,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Emails are all sent!&quot;]" />
                 </Sequence>
               </Sequence>
             </ActivityAction>
@@ -289,10 +296,10 @@
         </umab:GmailApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="g:GoogleApiException" sap:VirtualizedContainerService.HintSize="400,163.333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="g:GoogleApiException" sap:VirtualizedContainerService.HintSize="852.666666666667,163.333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
