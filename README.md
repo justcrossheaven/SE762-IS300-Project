@@ -28,7 +28,7 @@ Enter the desired email into each contact persons' email address.
 This will be the email address that is sent the PDF email.
 
 ## Run Main file
-Run file - Do not run via debug
+Run file - Do not run via debug  
 On running, the user will be prompted with input dialogs.  
 Input the requested information.
 Names of the coordinators;  The various deadlines of the event;  Links to be inserted into the final pdf.
