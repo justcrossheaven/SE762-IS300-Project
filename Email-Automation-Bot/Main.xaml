@@ -95,7 +95,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1237.33333333333,14668" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="1237.33333333333,13390" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="projectDataPath" />
       <Variable x:TypeArguments="x:String" Name="saveFilesToFolderPath" />
@@ -153,15 +153,15 @@
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,1414.66666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="535.333333333333,1217.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="493.333333333333,1125.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
               <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454.666666666667,894" sap2010:WorkflowViewState.IdRef="Sequence_38">
                 <sap:WorkflowViewStateService.ViewState>
@@ -215,10 +215,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="459.333333333333,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -226,11 +226,19 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
                   </ActivityAction.Argument>
-                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
-                    <ui:InputDialog.Result>
-                      <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
-                    </ui:InputDialog.Result>
-                  </ui:InputDialog>
+                  <Sequence DisplayName="Catch Exception" sap:VirtualizedContainerService.HintSize="376,463.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exception.GetBaseException.ToString]" />
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                  </Sequence>
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>
@@ -251,15 +259,15 @@
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,1414.66666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="535.333333333333,1217.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="493.333333333333,1125.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_5">
             <TryCatch.Try>
               <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454.666666666667,894" sap2010:WorkflowViewState.IdRef="Sequence_43">
                 <sap:WorkflowViewStateService.ViewState>
@@ -313,10 +321,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="459.333333333333,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -324,11 +332,19 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
                   </ActivityAction.Argument>
-                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Free Parking Requst Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_29" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for free parking request deadline." Title="Deadlines Input">
-                    <ui:InputDialog.Result>
-                      <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
-                    </ui:InputDialog.Result>
-                  </ui:InputDialog>
+                  <Sequence DisplayName="Catch Exception" sap:VirtualizedContainerService.HintSize="376,463.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[exception.GetBaseException.ToString]" />
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Free Parking Requst Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_29" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for free parking request deadline." Title="Deadlines Input">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                  </Sequence>
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>
@@ -349,15 +365,15 @@
         <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,1414.66666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1195.33333333333,988.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="542.666666666667,1217.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_47">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,791.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="500.666666666667,1125.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="434,699.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_6">
             <TryCatch.Try>
               <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="462,894" sap2010:WorkflowViewState.IdRef="Sequence_46">
                 <sap:WorkflowViewStateService.ViewState>
@@ -411,10 +427,10 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="466.666666666667,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,532.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -422,11 +438,19 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
                   </ActivityAction.Argument>
-                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Event Date" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_31" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for activity date." Title="Deadlines Input">
-                    <ui:InputDialog.Result>
-                      <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
-                    </ui:InputDialog.Result>
-                  </ui:InputDialog>
+                  <Sequence DisplayName="Catch Exception" sap:VirtualizedContainerService.HintSize="376,463.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.GetBaseException.ToString]" />
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Event Date" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_31" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for activity date." Title="Deadlines Input">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                  </Sequence>
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>
