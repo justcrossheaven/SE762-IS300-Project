@@ -6,6 +6,12 @@ Our proposed RPA bot will generate a personalised PDF featuring relevant informa
 
 # Instructions for use
 
+## Github Link
+
+Please access the github repository via the link below:
+
+https://github.com/justcrossheaven/SE762-IS300-Project
+
 ## SETUP
 
 ### Requirements
