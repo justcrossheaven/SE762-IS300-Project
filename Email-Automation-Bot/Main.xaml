@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1224,12538</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1224,11210.6666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -95,7 +95,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1234,12473" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="1234,11146" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="projectDataPath" />
       <Variable x:TypeArguments="x:String" Name="saveFilesToFolderPath" />
@@ -126,38 +126,38 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Project Coordinator 1" sap:VirtualizedContainerService.HintSize="1192,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please give the full name of the first project coordinator." Title="Project Coordinators Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Project Coordinator 1" sap:VirtualizedContainerService.HintSize="1192,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please give the full name of the first project coordinator." Title="Project Coordinators Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputProjectCoordinator1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Project Coordinator 2" sap:VirtualizedContainerService.HintSize="1192,238" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please give the full name of the second project coordinator." Title="Project Coordinators Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Project Coordinator 2" sap:VirtualizedContainerService.HintSize="1192,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please give the full name of the second project coordinator." Title="Project Coordinators Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputProjectCoordinator2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="1192,238" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please input the deadline date (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="1192,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please input the deadline date (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,1402" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,1414.66666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="534,1206" sap2010:WorkflowViewState.IdRef="Sequence_37">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="535.333333333333,1217.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="492,1114" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="493.333333333333,1125.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
-              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454,887" sap2010:WorkflowViewState.IdRef="Sequence_38">
+              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454.666666666667,894" sap2010:WorkflowViewState.IdRef="Sequence_38">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign sap:VirtualizedContainerService.HintSize="412.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_17">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:DateTime">[DeadlineDate1]</OutArgument>
                   </Assign.To>
@@ -165,20 +165,20 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(inputDeadlineDate1, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleWhile DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412,595" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
+                <ui:InterruptibleWhile DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412.666666666667,599.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
                   <ui:InterruptibleWhile.Body>
-                    <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,430" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_41">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_26" IsPassword="False" Label="Please input a valid date for the prize money donation acknowledgement." Title="Deadlines Input">
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_26" IsPassword="False" Label="Please input a valid date for the prize money donation acknowledgement." Title="Deadlines Input">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_24">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:DateTime">[DeadlineDate1]</OutArgument>
                         </Assign.To>
@@ -192,7 +192,7 @@
                     <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DateTime.Compare(DeadlineDate1, DateTime.Today).Equals(-1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
                   </ui:InterruptibleWhile.Condition>
                 </ui:InterruptibleWhile>
-                <Assign sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                <Assign sap:VirtualizedContainerService.HintSize="412.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_22">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[DeadlineDateBreak1]</OutArgument>
                   </Assign.To>
@@ -203,7 +203,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="458,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="459.333333333333,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -214,14 +214,14 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Catch Exception" sap:VirtualizedContainerService.HintSize="376,461" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <Sequence DisplayName="Catch Exception" sap:VirtualizedContainerService.HintSize="376,460.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_51">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exception.GetBaseException.ToString]" />
-                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exception.GetBaseException.ToString]" />
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Donation Acknowledgement Deadline" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="Please input correct date format (dd/MM/yyyy) for the prize money donation acknowledgement." Title="Deadlines Input">
                       <ui:InputDialog.Result>
                         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate1]</OutArgument>
                       </ui:InputDialog.Result>
@@ -242,12 +242,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Free Parking Requst Deadline" sap:VirtualizedContainerService.HintSize="1192,238" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please input the date (dd/MM/yyyy) for free parking request deadline date." Title="Deadlines Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Free Parking Requst Deadline" sap:VirtualizedContainerService.HintSize="1192,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please input the date (dd/MM/yyyy) for free parking request deadline date." Title="Deadlines Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputDeadlineDate2]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,471" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,472" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_16">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="476,275" sap2010:WorkflowViewState.IdRef="Sequence_44">
           <sap:WorkflowViewStateService.ViewState>
@@ -345,28 +345,28 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Event Date" sap:VirtualizedContainerService.HintSize="1192,238" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please input the date (dd/MM/yyyy) of the event." Title="Event Date Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Event Date" sap:VirtualizedContainerService.HintSize="1192,239.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please input the date (dd/MM/yyyy) of the event." Title="Event Date Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[inputActivityDate]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." Condition="[ActivityDateBreak3]" DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,1402" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="This is to check whether the format is correct and the date is valid." Condition="[ActivityDateBreak3]" DisplayName="As long as the date format is incorrect" sap:VirtualizedContainerService.HintSize="1192,1411.33333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_18">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="534,1206" sap2010:WorkflowViewState.IdRef="Sequence_47">
+        <Sequence DisplayName="Overall Try Catch" sap:VirtualizedContainerService.HintSize="542.666666666667,1214" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="492,1114" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+          <TryCatch DisplayName="Try Catch Incorrect Date Format" sap:VirtualizedContainerService.HintSize="500.666666666667,1122" sap2010:WorkflowViewState.IdRef="TryCatch_6">
             <TryCatch.Try>
-              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="454,887" sap2010:WorkflowViewState.IdRef="Sequence_46">
+              <Sequence DisplayName="Assign Variables and Another While Loop" sap:VirtualizedContainerService.HintSize="462,890" sap2010:WorkflowViewState.IdRef="Sequence_46">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                <Assign sap:VirtualizedContainerService.HintSize="420,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_28">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:DateTime">[ActivityRealDate]</OutArgument>
                   </Assign.To>
@@ -374,7 +374,7 @@
                     <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(inputActivityDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InterruptibleWhile Condition="[DateTime.Compare(ActivityRealDate, DateTime.Today).Equals(-1)]" DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="412,595" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_17">
+                <ui:InterruptibleWhile Condition="[DateTime.Compare(ActivityRealDate, DateTime.Today).Equals(-1)]" DisplayName="As long as the input date is before today's date" sap:VirtualizedContainerService.HintSize="420,596.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_17">
                   <ui:InterruptibleWhile.Body>
                     <Sequence DisplayName="Input Dialog &amp; Re-assign" sap:VirtualizedContainerService.HintSize="376,430" sap2010:WorkflowViewState.IdRef="Sequence_45">
                       <sap:WorkflowViewStateService.ViewState>
@@ -483,7 +483,7 @@
     <ui:SelectFile DisplayName="Select Word Template" Filter="Word|*.docx;*.doc;*.docm;*.dotx;*.dot" sap:VirtualizedContainerService.HintSize="1192,137" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[wordTemplatePath]" />
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message To Select Saved Generated Files" sap:VirtualizedContainerService.HintSize="1192,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please Select Where To Save Generated Outputs.&quot;]" />
     <ui:SelectFolder DisplayName="Select Where To Save Events Folder" sap:VirtualizedContainerService.HintSize="1192,78" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[saveFilesToFolderPath]" />
-    <Assign sap:VirtualizedContainerService.HintSize="1192,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign sap:VirtualizedContainerService.HintSize="1192,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[currentWorkingFolderPath]</OutArgument>
       </Assign.To>
@@ -491,10 +491,10 @@
         <InArgument x:TypeArguments="x:String">[path.Combine(saveFilesToFolderPath, path.GetFileNameWithoutExtension(projectDataPath))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Working Folder" sap:VirtualizedContainerService.HintSize="1192,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[currentWorkingFolderPath]" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy SpreadSheet To Working Folder" sap:VirtualizedContainerService.HintSize="1192,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[projectDataPath]" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy Word Template To Working Folder" sap:VirtualizedContainerService.HintSize="1192,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[wordTemplatePath]" />
-    <ui:MultipleAssign DisplayName="Assign SpreadSheet &amp; Template Path" sap:VirtualizedContainerService.HintSize="1192,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Working Folder" sap:VirtualizedContainerService.HintSize="1192,79.3333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[currentWorkingFolderPath]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy SpreadSheet To Working Folder" sap:VirtualizedContainerService.HintSize="1192,158" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[projectDataPath]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[currentWorkingFolderPath]" DisplayName="Copy Word Template To Working Folder" sap:VirtualizedContainerService.HintSize="1192,158" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[wordTemplatePath]" />
+    <ui:MultipleAssign DisplayName="Assign SpreadSheet &amp; Template Path" sap:VirtualizedContainerService.HintSize="1192,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -516,15 +516,15 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Generated Word Doc Folder" sap:VirtualizedContainerService.HintSize="1192,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[wordDocFolderPath]" />
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Generated PDF Folder" sap:VirtualizedContainerService.HintSize="1192,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[pdfFolderPath]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Use Excel" sap:VirtualizedContainerService.HintSize="1192,2329" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[path.Combine(currentWorkingFolderPath,  path.GetFileName(projectDataPath))]">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Generated Word Doc Folder" sap:VirtualizedContainerService.HintSize="1192,79.3333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[wordDocFolderPath]" />
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Generated PDF Folder" sap:VirtualizedContainerService.HintSize="1192,79.3333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[pdfFolderPath]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Use Excel" sap:VirtualizedContainerService.HintSize="1192,2327.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[path.Combine(currentWorkingFolderPath,  path.GetFileName(projectDataPath))]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Data Sanitisation is necessary as spreadsheet contains combined columns which UIPath can not easily handle." DisplayName="Sanitise Data" sap:VirtualizedContainerService.HintSize="569,2220" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="Data Sanitisation is necessary as spreadsheet contains combined columns which UIPath can not easily handle." DisplayName="Sanitise Data" sap:VirtualizedContainerService.HintSize="568.666666666667,2218.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="RawData" />
               <Variable x:TypeArguments="sd:DataTable" Name="headings" />
@@ -664,13 +664,13 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1192,681" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1192,401.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Create Corresponding Word Doc Template" sap:VirtualizedContainerService.HintSize="476,561" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Create Corresponding Word Doc Template" sap:VirtualizedContainerService.HintSize="476,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="nameHeader" />
               <Variable x:TypeArguments="x:String" Name="emailHeader" />
@@ -683,15 +683,15 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,469" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,187.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_7">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="621,1297" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                <Sequence sap:VirtualizedContainerService.HintSize="620.666666666667,1344" sap2010:WorkflowViewState.IdRef="Sequence_54">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="579,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="578.666666666667,191.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -729,9 +729,9 @@
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
-                  <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Current Row Does not have Number of Judges" sap:VirtualizedContainerService.HintSize="579,208" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Current Row Does not have Number of Judges" sap:VirtualizedContainerService.HintSize="578.666666666667,222" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                         </Assign.To>
@@ -741,7 +741,7 @@
                       </Assign>
                     </If.Then>
                     <If.Else>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                         </Assign.To>
@@ -751,9 +751,9 @@
                       </Assign>
                     </If.Else>
                   </If>
-                  <If Condition="[numberOfJudges &gt; 3]" DisplayName="If Number of Judges &gt; 3" sap:VirtualizedContainerService.HintSize="579,208" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[numberOfJudges &gt; 3]" DisplayName="If Number of Judges &gt; 3" sap:VirtualizedContainerService.HintSize="578.666666666667,251.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign sap:VirtualizedContainerService.HintSize="262.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[numberOfJudges]</OutArgument>
                         </Assign.To>
@@ -763,21 +763,21 @@
                       </Assign>
                     </If.Then>
                   </If>
-                  <If Condition="[numberOfJudges &gt; 0]" DisplayName="If Number of Judges &gt; 0" sap:VirtualizedContainerService.HintSize="579,476" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If Condition="[numberOfJudges &gt; 0]" DisplayName="If Number of Judges &gt; 0" sap:VirtualizedContainerService.HintSize="578.666666666667,520.666666666667" sap2010:WorkflowViewState.IdRef="If_5">
                     <If.Then>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Judge" sap:VirtualizedContainerService.HintSize="434,328" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1,numberOfJudges).ToArray()]">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Judge" sap:VirtualizedContainerService.HintSize="434,330.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(1,numberOfJudges).ToArray()]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="i" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Create Word Template For Each Judge" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="Create Word Template For Each Judge" sap:VirtualizedContainerService.HintSize="376,204.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Update-Word-Template workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Update-Word-Template.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Update-Word-Template workflow" sap:VirtualizedContainerService.HintSize="334,112.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Update-Word-Template.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="SentDate">[DateTime.Now.ToString("yyyy/MM/dd")]</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="CompanyName">[CurrentRow.Item("Company").ToString]</InArgument>
@@ -805,10 +805,10 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,307" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,20.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -834,126 +834,32 @@
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
     <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="OkCancel" ChosenButton="[KeepRunning]" DisplayName="Allow Users To Check Generated Files" sap:VirtualizedContainerService.HintSize="1192,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;You can check generated files. Click Ok to continue, Cancel to stop&quot;]" />
-    <If sap2010:Annotation.AnnotationText="We would like the user to be able to check the files. Therefore we choose not to put this sequence in the previous loop." Condition="[KeepRunning.Equals(&quot;Ok&quot;)]" DisplayName="If User is Fine With Files" sap:VirtualizedContainerService.HintSize="1192,1446" sap2010:WorkflowViewState.IdRef="If_7">
+    <If sap2010:Annotation.AnnotationText="We would like the user to be able to check the files. Therefore we choose not to put this sequence in the previous loop." Condition="[KeepRunning.Equals(&quot;Ok&quot;)]" DisplayName="If User is Fine With Files" sap:VirtualizedContainerService.HintSize="1192,367.333333333333" sap2010:WorkflowViewState.IdRef="If_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Loop Through the DataTable" sap:VirtualizedContainerService.HintSize="771,1267" sap2010:WorkflowViewState.IdRef="Sequence_25">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sanitisedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="729,1051" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Load Necessary Data" sap:VirtualizedContainerService.HintSize="695,931" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="emailHeader" />
-                    <Variable x:TypeArguments="x:Int32" Name="Judges" />
-                    <Variable x:TypeArguments="x:String" Name="nameHeader" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="653,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                    <ui:MultipleAssign.AssignOperations>
-                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                          <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:String">[emailHeader]</OutArgument>
-                          </ui:AssignOperation.To>
-                          <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">Email</InArgument>
-                          </ui:AssignOperation.Value>
-                        </ui:AssignOperation>
-                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                          <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:String">[nameHeader]</OutArgument>
-                          </ui:AssignOperation.To>
-                          <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">Name</InArgument>
-                          </ui:AssignOperation.Value>
-                        </ui:AssignOperation>
-                      </scg:List>
-                    </ui:MultipleAssign.AssignOperations>
-                  </ui:MultipleAssign>
-                  <If Condition="[String.IsNullOrEmpty(CurrentRow.Item(&quot;Number of Judges&quot;).ToString)]" DisplayName="If Number of Judges is Empty" sap:VirtualizedContainerService.HintSize="653,300" sap2010:WorkflowViewState.IdRef="If_6">
-                    <If.Then>
-                      <Sequence DisplayName="Assign Number of Judge To Be 0" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Assign Number of Judge" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Judges]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(CurrentRow.Item("Number of Judges"))]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Judge" sap:VirtualizedContainerService.HintSize="653,328" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Enumerable.Range(1,Judges).ToArray()]">
-                    <ui:ForEach.Body>
-                      <ActivityAction x:TypeArguments="x:Object">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Send Email To Judge" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Email Sending Template" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Email-Sending-Template.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow.Item(emailHeader + item.ToString).ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">[pdfFolderPath]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PersonFullName">[CurrentRow.Item(nameHeader + item.ToString).ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="CompanyName">[CurrentRow.Item("Company").ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="Deadline">[inputDeadlineDate1.ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="ActivityDate">[inputActivityDate.ToString]</InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ForEach.Body>
-                  </ui:ForEach>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-          </ui:ForEachRow>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:05:00" DisplayName="Notify the User" sap:VirtualizedContainerService.HintSize="729,84" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Emails are all sent!&quot;]" />
-        </Sequence>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Email Sending Template" sap:VirtualizedContainerService.HintSize="334,112.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Email-Sending-Template.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="Email" />
+            <InArgument x:TypeArguments="x:String" x:Key="PdfFolderPath">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pdfFolderPath" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="PersonFullName" />
+            <InArgument x:TypeArguments="x:String" x:Key="CompanyName" />
+            <InArgument x:TypeArguments="x:String" x:Key="ActivityDate">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="inputActivityDate.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Deadline">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="inputDeadlineDate1.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="sd:DataTable" x:Key="sanitisedData">
+              <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="sanitisedData" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
       </If.Then>
       <If.Else>
         <Sequence DisplayName="Stop The Robot" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_26">
