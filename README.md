@@ -14,11 +14,20 @@ https://github.com/justcrossheaven/SE762-IS300-Project
 
 ## SETUP
 
-### Requirements
+### System & Software Requirements
 
 - Windows
 - Google Account with Gmail
 - UiPath Studio (>= 2021.10.7)
+
+### Dependencies Requirements
+Please make sure these packages are installed in UiPath. Install them if not.
+
+- UiPath.Excel.Activities >= 2.9.5
+- UiPath.Mail.Activities >= 1.12.3
+- UiPath.System.Activities >= 21.10.5
+- UiPath.UIAutomation.Activities >= 21.10.6
+- UiPath.Word.Activities >= 1.7.3
 
 ### Add your email as the sender.
 
